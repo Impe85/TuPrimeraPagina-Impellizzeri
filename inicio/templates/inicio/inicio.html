@@ -1,0 +1,19 @@
+{% extends "shared/index.html" %} 
+
+{% block head %}
+<title>Inicio</title>
+{% endblock head %} 
+
+{% block h1_header %}
+Welcome the site Archery!!!
+{% endblock h1_header %}
+
+{% block formulario %}
+<form method="post">
+    {% csrf_token %}
+    {{ form.name.label_tag }}: {{ form.name }}<br>
+    {{ form.manufacturer.label_tag }}: {{ form.manufacturer }}<br>
+    {{ form.description.label_tag }}: {{ form.description }}<br>
+    <button type="submit">Save</button>
+</form>
+{% endblock %}
