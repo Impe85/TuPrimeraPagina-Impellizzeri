@@ -5,3 +5,6 @@ class ArcheryEquipmentForm(forms.Form):
     manufacturer = forms.CharField(max_length=100)
     description = forms.CharField(widget=forms.TextInput)
 
+class ArcheryEquipmentSearchForm(forms.Form):
+    name = forms.CharField(max_length=100, required=False,)
+    

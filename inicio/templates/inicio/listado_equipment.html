@@ -1,0 +1,18 @@
+{% extends "shared/index.html" %}  <!-- Asumiendo que tienes un archivo base.html que sirve como plantilla principal -->
+
+{% block main %}
+    <h1 class="title">Listado de Equipos</h1>
+    <form method="get">
+        {{formulario}}
+        <input type="submit" value="Buscar">
+    </form>
+
+    {% if equipos_encontrados %}
+    <ul>
+        {% for equipo in equipos_encontrados %}
+            <li>{{ equipo.name }}</li>  <!-- Asume que tu modelo tiene un campo llamado 'name'. Cambia esto según tu modelo. -->
+        {% endfor %}
+    </ul>
+    {% endif %}
+    
+{% endblock main %}
